@@ -35,7 +35,7 @@ channelPerms = {                                                                
     "early": (994215060052381706, 994226835795746867 ),                                                                     #This dictionary defines what roles will have access to each type of Ticket Channel
     "e4rly": (994215060052381706, 1178285446158094386, 1213575945991102504),                                           #Each type can support multiple role IDS
     "enrly": (994215060052381706, 1230216013195513928, 1230216099228942489) , 
-    "friend": (994215060052381706,1213575945991102504, 1230216099228942489) #Each entry into the definition should look something like this:
+    "friend": (994215060052381706,1213575945991102504, 1230216099228942489, 1178285446158094386, 1230216013195513928, 994226835795746867) #Each entry into the definition should look something like this:
 }                                                                                                         #"Type of Option":(ROLEID1, ROLEID2)
                                                                                                           #Add a comma after every option definition except for the last one. 
                                                                                                           #If you only have one option then no comma is needed.
