@@ -190,6 +190,8 @@ class embedButtons(discord.ui.View):
             await interaction.response.send_message(embed=embed3,
                                                     ephemeral=False,
                                                     view=optionsMenu())
+            await asyncio.sleep(10)
+            await interaction.message.delete()
           except discord.HTTPException:
             await interaction.response.send_message(
                 "HTTP Error that I'm too lazy to type out. Try again.",
