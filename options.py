@@ -169,6 +169,8 @@ class optionsMenu(discord.ui.View):
         embed2.set_author(name=f'{author}', icon_url=f'{author.display_avatar}')
         #embed2.set_footer(text=f"{footerOfEmbeds} | {bot.user.id}", icon_url=f'{bot.user.display_avatar}')  
         await interaction.edit_original_response(embed=embed2, view=None)
+        await asyncio.sleep(30)
+        await interaction.message.delete()
 
     @discord.ui.button(label="Удалить участника/Remove a member", emoji="👋", style=discord.ButtonStyle.gray)
     async def removemember(self, interaction:discord.Interaction, button: discord.ui.button):
@@ -178,6 +180,8 @@ class optionsMenu(discord.ui.View):
         embed2.set_author(name=f'{author}', icon_url=f'{author.display_avatar}')
         #embed2.set_footer(text=f"{footerOfEmbeds} | {bot.user.id}", icon_url=f'{bot.user.display_avatar}')  
         await interaction.edit_original_response(embed=embed2, view=None)
+        await asyncio.sleep(30)
+        await interaction.message.delete()
 
     
     @discord.ui.button(label="Переименовать/Rename", emoji="✏️", style=discord.ButtonStyle.gray)
@@ -188,6 +192,8 @@ class optionsMenu(discord.ui.View):
         embed2.set_author(name=f'{author}', icon_url=f'{author.display_avatar}')
         #embed2.set_footer(text=f"{footerOfEmbeds} | {bot.user.id}", icon_url=f'{bot.user.display_avatar}')  
         await interaction.edit_original_response(embed=embed2, view=None)
+        await asyncio.sleep(30)
+        await interaction.message.delete()
         
    
     @discord.ui.button(label="Сохранить и удалить/Save and delete", emoji="📝", style=discord.ButtonStyle.green)
@@ -200,6 +206,10 @@ class optionsMenu(discord.ui.View):
             await interaction.response.edit_message(embed=embed6, view=yesOrNoOption(timeout=None))
         except discord.HTTPException:
             await interaction.response.edit_message("Something weird happened here, try again.")
+    
+    @discord.ui.button(label="Закрыть / Close", emoji="👥", style=discord.ButtonStyle.gray)
+    async def close(self, interaction:discord.Interaction, button: discord.ui.button):
+        await interaction.message.delete()
 
 
 class yesOrNoOption(discord.ui.View):
