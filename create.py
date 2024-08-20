@@ -356,7 +356,7 @@ class TicketCreationModal(discord.ui.Modal, title=f"Заявка в полк/App
 
     if channelPerms[ticketType] == (994215060052381706,1213575945991102504, 1230216099228942489, 1178285446158094386, 1230216013195513928, 994226835795746867):   #Для friend
         
-      await tchannel.send(f'{author.mention}, заполните заявку / Fill out the ticket: \n\n __Для получения роли друга - <@&1089937722346569738> укажите:__ \n 1) [Тег полка или -] Игровой ник (Реальное имя) \n 2) Причина/цель получения роли друга \n 3) Ознакомиться с п.7 Раздела V канала: https://discord.com/channels/994209405908291727/1151946485047496827  \n ———————————————————————————— \n To get a friend role - <@&1089937722346569738> specify:  \n 1) [Your Squadron Tag] Game Nickname (How you want to be called here) \n 2) Reason/purpose for getting a friend role \n 3) Read the 7th point of the V part of rules: https://discord.com/channels/994209405908291727/1230943314740645989 ')
+      await tchannel.send(f'{author.mention}, заполните заявку / Fill out the ticket: \n\n __Для получения роли друга - <@&1089937722346569738> укажите:__ \n 1) [Тег полка или -] Игровой ник (Реальное имя) \n 2) Причина/цель получения роли друга; ваш возраст \n 3) Ознакомиться с п.7 Раздела V канала: https://discord.com/channels/994209405908291727/1151946485047496827  \n ———————————————————————————— \n To get a friend role - <@&1089937722346569738> specify:  \n 1) [Your Squadron Tag] Game Nickname (How you want to be called here) \n 2) Reason/purpose for getting a friend role \n 3) Read the 7th point of the V part of rules: https://discord.com/channels/994209405908291727/1230943314740645989 ')
 
 class TicketCreation(discord.ui.View):
 
